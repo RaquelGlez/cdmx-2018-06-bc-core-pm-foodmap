@@ -4,12 +4,13 @@ window.onload = () => {
   contenedor.style.visibility = 'hidden';
   contenedor.style.opacity = '0';
   location.href = '../src/views/view1.html';
+  // restaurants();
 };
 
 
 // Guardamos la ubicación de la data en una variable
 const json = 'https://raw.githubusercontent.com/RaquelGlez/cdmx-2018-06-bc-core-pm-foodmap/master/data/data.json';
-window.onload = () => {
+const restaurants = () => {
   fetch(json)
     .then(response => response.json())
     .then((data) =>{
@@ -23,9 +24,9 @@ window.onload = () => {
 const searchInput = document.getElementById('search');
 const btn = document.getElementById('btn-search');
 
-const search = (data) => {
-  textSearch = searchInput.value;
-  console.log(textSearch);
-};
-
-btn.addEventListener('click', search);
+// const search = (data) => {
+//   textSearch = searchInput.value;
+//   console.log(textSearch);
+// };
+//
+// btn.addEventListener('click', search);
